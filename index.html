@@ -1,0 +1,45 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8" />
+    <title>天気予報</title>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  
+  </HEAD>
+  
+  <BODY onload="proc();"> 
+    <h1>天気予報</h1>
+
+    <p>天気予報を表示させたい都市を選んでください.<br>
+      <input id="札幌" type="radio" name = "city" value="札幌" onchange="proc()">札幌
+      <input id="仙台" type="radio" name = "city" value="仙台" onchange="proc()">仙台
+      <input id="新潟" type="radio" name = "city" value="新潟" onchange="proc()">新潟
+      <input id="東京" type="radio" name = "city" value="東京" onchange="proc()" checked>東京
+      <input id="名古屋" type="radio" name = "city" value="名古屋" onchange="proc()">名古屋
+      <input id="大阪" type="radio" name = "city" value="大阪" onchange="proc()">大阪
+      <input id="広島" type="radio" name = "city" value="広島" onchange="proc()">広島
+      <input id="松山" type="radio" name = "city" value="松山" onchange="proc()">松山
+      <input id="那覇" type="radio" name = "city" value="那覇" onchange="proc()">那覇
+      <input id="福岡" type="radio" name = "city" value="福岡" onchange="proc()">福岡
+    </p>
+
+    <div class="search">
+      <input id="searchLat" type="text" placeholder="緯度"/>
+      <input id="searchLon" type="text" placeholder="経度"/>
+      <input id="searchButton" type="button" value="検索" onclick="search()"/>
+      <a href="https://www.google.co.jp/maps?hl=ja&tab=rl" target="_blank" class="googlemap">緯度経度を調べるにはこちらから</a>
+    </div>
+
+    <div id = result_title></div>
+     
+    <div id = "weather">
+    </div>
+
+  </BODY>
+  </HTML>
+
+
+  <!-- apiキーの取得
+  緯度経度のエラーメッセージ
+  検索位置もう少し右 -->
